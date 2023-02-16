@@ -6,7 +6,9 @@
   "scripts": {
     "compile": "yarn hardhat compile",
     "prettier": "prettier --write --plugin=prettier-plugin-solidity 'contracts/**/*.sol'",
-    "test": "yarn hardhat test"
+    "test": "yarn hardhat test",
+    "slither": "winpty docker run -it --rm trailofbits/slither slither /contracts/NftMarketplace.sol",
+    "toolbox": "docker run -it --rm -v $PWD:/src trailofbits/eth-security-toolbox"
   },
   "devDependencies": {
     "@chainlink/contracts": "^0.4.0",

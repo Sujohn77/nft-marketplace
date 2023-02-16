@@ -35,6 +35,12 @@ const networkConfig = {
 const DECIMALS = 18;
 const INITIAL_PRICE = "200000000000000000000";
 const VERIFICATION_BLOCK_CONFIRMATIONS = 6;
+const backendContractsFile =
+  "../nestjs-nft-marketplace-fcc/src/abi/networkMapping.json";
+const backendContractsFile2 =
+  "../nestjs-nft-marketplace-thegraph-fcc/src/abi/networkMapping.json";
+const backendAbiLocation = "../nestjs-nft-marketplace-fcc/src/abi/";
+const frontendAbiLocation = "../client-nft-marketplace-fcc/src/constants/";
 const developmentChains = ["hardhat", "localhost"];
 module.exports = {
   developmentChains,
@@ -42,4 +48,9 @@ module.exports = {
   INITIAL_PRICE,
   VERIFICATION_BLOCK_CONFIRMATIONS,
   networkConfig,
+  backendContractsFile,
+  backendContractsFile2,
+  backendAbiLocation,
+  frontendAbiLocation,
+  frontendContractsFile: frontendAbiLocation + "/networkMapping.json",
 };
